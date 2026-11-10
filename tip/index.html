@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tip DJ Nick Stene</title>
+<meta name="description" content="Feeling tipsy? Tip DJ Nick Stene with Venmo, Zelle or Apple Tap to Cash, and follow on SoundCloud and Instagram.">
+<meta property="og:title" content="Feeling tipsy? Tip DJ Nick Stene">
+<meta property="og:url" content="https://djnickstene.com/tip/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Pinyon+Script&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="tiphead">
+    <h1 style="margin:0;font-weight:inherit">
+      <span class="feeling caps">Feeling</span>
+      <span class="tipsy script">tipsy?</span>
+    </h1>
+    <p>Tip your DJ<strong>NICK STENE</strong></p>
+  </header>
+
+  <div class="stack">
+    <a class="btn primary" href="https://venmo.com/u/nick-stene">
+      <span>Tip with Venmo<small>@nick-stene</small></span>
+      <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+
+    <details class="panel">
+      <summary>
+        <span>Tip with Zelle<small>Send from your bank app</small></span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+      <div class="body">
+        <p style="margin:0 0 10px">In your bank’s app, open Zelle and send to:</p>
+        <div class="copyline">
+          <code id="zelle">nickstene@gmail.com</code>
+          <button class="copy" type="button" data-copy="zelle">Copy</button>
+        </div>
+        <p class="note">It should show the name Nicholas Stene before you send.</p>
+      </div>
+    </details>
+
+    <details class="panel">
+      <summary>
+        <span>iPhone? Tap to Cash<small>Hold your phone near Nick’s at the booth</small></span>
+        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </summary>
+      <div class="body">
+        <ol>
+          <li>Open <strong>Wallet</strong> and tap your <strong>Apple Cash</strong> card.</li>
+          <li>Tap <strong>Send or Request</strong>, then <strong>Tap to Cash</strong>.</li>
+          <li>Enter an amount and tap <strong>Next</strong>.</li>
+          <li>Double-click the side button to confirm.</li>
+          <li>Hold the top of your iPhone near Nick’s phone.</li>
+        </ol>
+        <p class="note">Needs iOS 18 or later and Apple Cash (US only).</p>
+      </div>
+    </details>
+  </div>
+
+  <p class="label">Follow the music</p>
+  <div class="row">
+    <a class="btn" href="https://soundcloud.com/nick-stene">
+      <span>SoundCloud<small>/nick-stene</small></span>
+    </a>
+    <a class="btn" href="https://www.instagram.com/nick.stene/">
+      <span>Instagram<small>@nick.stene</small></span>
+    </a>
+  </div>
+</main>
+
+<footer>Thank you for the love. <a href="/">djnickstene.com</a></footer>
+
+<script>
+document.querySelectorAll('[data-copy]').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var text = document.getElementById(b.dataset.copy).textContent.trim();
+    var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy'; }, 1800); };
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(done, function () { fallback(); });
+    } else { fallback(); }
+    function fallback() {
+      var t = document.createElement('textarea'); t.value = text; t.setAttribute('readonly', '');
+      t.style.position = 'absolute'; t.style.left = '-9999px'; document.body.appendChild(t);
+      t.select(); try { document.execCommand('copy'); done(); } catch (e) {} document.body.removeChild(t);
+    }
+  });
+});
+</script>
+</body>
+</html>
